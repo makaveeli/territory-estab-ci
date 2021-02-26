@@ -1,0 +1,88 @@
+body{
+  /* background-image: url('../images/bg.png'); */
+  background-size: cover;
+  background-color: rgba(77, 77, 77, 0.315);
+  background-repeat: no-repeat;
+}
+
+
+.form-db{
+  padding: 14px;
+}
+
+.gandia .cc{
+  display: inline-block;
+}
+
+.ok .okk{
+  vertical-align:middle;
+}
+
+.ok{
+  width: 100%;
+}
+
+.horm{
+  border: 2px;
+}
+
+.kol{
+  width: 91%;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  padding: 3px 3px;
+  /* margin: 8px 0; */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #e1e6a9cb;
+}
+
+.oke-jo{
+  float: right;
+}
+
+.crdless{
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.no-title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21pt;
+  font-weight: bold;
+  margin-top: 7px;
+  padding: 4px;
+}
+
+#oke-back{
+  float: right;
+}
+
+#provinsi{  
+  background: #e1e6a9cb;
+}
+#kotax{  
+  background: #e1e6a9cb;
+}
+#kecamatanx{  
+  background: #e1e6a9cb;
+}
+#years{  
+  background: #e1e6a9cb;
+}
+#calon{  
+  background: #e1e6a9cb;
+}
+#batasan{  
+  background: #e1e6a9cb;
+}
+#luas{  
+  background: #e1e6a9cb;
+}
+
+.noob{
+  width: 100px;
+  height: 50px;
+}
