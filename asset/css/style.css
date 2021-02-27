@@ -103,6 +103,8 @@ body{
   border-radius: 5px;
   margin-left: 37%;
   margin-right: -50%;
+  border: outset;
+  border-color: rgb(233, 249, 250);
 }
 
 .form-login #title-login{
@@ -114,7 +116,7 @@ body{
 .form-login .auth-logo{
   width: 50px;
   margin-left: 41.2%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .login-bt .login{
@@ -134,4 +136,41 @@ body{
   color: rgb(78, 63, 63);
   margin-left: 32%;
   padding: 3px;
+}
+
+.dash-index{
+  background: none;
+  width: 350px;
+  border-radius: 5px;
+  border: outset;
+  margin-top: 7%;
+  padding: 20px;
+  position: relative;
+  border-color: rgb(230, 230, 230);
+}
+.dash-index-new{
+  background: none;
+  width: 350px;
+  border-radius: 5px;
+  border: outset;
+  margin-top: 1%;
+  padding: 20px;
+  position: relative;
+  border-color: rgb(230, 230, 230);
+}
+
+.dash-index a{
+  width: 300px;
+}
+.dash-index-new a{
+  width: 300px;
+}
+
+.dash{
+  margin-left: 20px;
+}
+
+.dash-val{
+  margin-left: 5px;
+  padding: 7px;
 }
