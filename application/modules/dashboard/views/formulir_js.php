@@ -223,10 +223,10 @@ $('#simpan').on('click', function(e){
                 data : {daerah: f, id_wil : msg.ins},
                 cache: false,
                   success: function(data){
-                    console.log(data)
+                    // console.log(data)
                   },
                   error:function (){
-                    alert('failure')
+                    // alert('failure')
                   }
                 })
               }
@@ -239,7 +239,7 @@ $('#simpan').on('click', function(e){
               console.log(msg)
             },
             error:function (){
-              alert('failure')
+              // alert('failure')
             }
           })
   }
