@@ -5,6 +5,12 @@ body{
   background-repeat: no-repeat;
 }
 
+#auth-bg{
+   background-image: url('../images/bg.png');
+   background-size: cover;
+   background-color: rgba(0, 0, 0, 0.315);
+   background-repeat: no-repeat;
+}
 
 .form-db{
   padding: 14px;
@@ -84,5 +90,48 @@ body{
 
 .noob{
   width: 100px;
-  height: 50px;
+  height: 30px;
+}
+
+.form-login{
+  width: 380px;
+  padding: 20px;
+  height: 200px;
+  background-color: #ffffff;
+  margin-top: 20%;
+  position: relative;
+  border-radius: 5px;
+  margin-left: 37%;
+  margin-right: -50%;
+}
+
+.form-login #title-login{
+  font-size: 19pt;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: yellow;
+}
+
+.form-login .auth-logo{
+  width: 50px;
+  margin-left: 41.2%;
+  margin-top: 20px;
+}
+
+.login-bt .login{
+  margin-left: 17px;
+  position: absolute;
+  width: 300px;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15pt;
+  margin-top: 29px;
+}
+.form-login p{
+  margin-top: 20%;
+  font-size: 10pt;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(78, 63, 63);
+  margin-left: 32%;
+  padding: 3px;
 }

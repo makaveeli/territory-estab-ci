@@ -1,3 +1,4 @@
+<script src="<?php echo base_url(); ?>asset/js/jquery-3.4.1.min.js"></script>
 <script>
     $(document).ready(function(){
         // menampilkan list provinsi
@@ -203,62 +204,49 @@ $('#simpan').on('click', function(e){
 
     var datac = {'provinsi' : pro, 'kota': kot, 'kecamatan': kec, 'years': yr, 'calon_kecamatan': cln, 'luas':ls}
 
-    for (var i = 0, iLen = h.length; i < iLen; i++) {
+  
                     
-      f = h[i].value;
-      var valid;	
-      // valid = validateContact();
-      // if(valid){
+      
         $.ajax({
           type : 'post',
-          url : '<?php echo base_url(); ?>dashboard/insert',
-          dataType: 'text',
-          data : {provinsi: pro, kota: kot, kecamatan : kec, year: yr, calon: cln, luas: ls, daerah: f},
+          url : '<?php echo base_url(); ?>dashboard/insert_induk_kec',
+          dataType: 'json',
+          data : {provinsi: pro, kota: kot, kecamatan : kec, year: yr, calon: cln, luas: ls},
           cache: false,
-            success: function(data){
-              // console.log(data);
-              $("#mail-status").html(data);
+            success: function(msg){
+              for (var i = 0, iLen = h.length; i < iLen; i++) {
+                f = h[i].value;
+                $.ajax({
+                type : 'post',
+                url : '<?php echo base_url(); ?>dashboard/insert_wilayah',
+                dataType: 'text',
+                data : {daerah: f, id_wil : msg.ins},
+                cache: false,
+                  success: function(data){
+                    console.log(data)
+                  },
+                  error:function (){
+                    alert('failure')
+                  }
+                })
+              }
+              if(msg.oke === 'success'){
+                alert('insert berhasil')
+                window.location.reload()
+              }else if(msg.err ==='error'){
+                alert('ada error')
+              }
+              console.log(msg)
             },
             error:function (){
-              // alert('goblog')
+              alert('failure')
             }
           })
-        }
   }
 })
 
-// function onClock(){
-//   var provinsi = 'laks'
-//   var valid;	
-//       valid = validateContact();
-//       if(valid){
-//         $.ajax({
-//           type : 'post',
-//           url : '<?php echo base_url(); ?>dashboard/insert',
-//           dataType: 'text',
-//           data : {provinsi: provinsi},
-//           cache: false,
-//             success: function(data){
-//               // console.log(data);
-//               $("#mail-status").html(data);
-//               // console.log(data)
-//             },
-//             error:function (){
-//               // alert('goblog')
-//             }
-//           })
-//         }
-//       }
-// function validateContact() {
-//     var valid = true;	
-//     $(".demoInputBox").css('background-color','');
-//     $(".info").html('');
-//     if(!$("#provinsi").val()) {
-//         $("#userName-info").html("(required)");
-//         $("#userName-info").css('color','red');
-//         $("#provinsi").css('background-color','red');
-//         valid = false;
-//     }
-//     return valid;
-// }
+function kuvk()
+{
+  window.location.reload()
+}
 </script>

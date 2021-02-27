@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/css/style.css"> -->
-<body>
 
-  <div class="container-fluid mt-2">
-    <button>GAMBAR</button> <a href="<?php echo base_url(); ?>dashboard/view_options"> PENATAAN KECAMATAN</a>
     <br>
-    <button>GAMBAR</button> <a href=""> PENATAAN KELURAHAN</a>
-  </div>
-    
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
-</body>
-</html>
+    <a href="<?php echo base_url(); ?>dashboard/form_pembentukan" class="btn btn-sm btn-info"> PENGGABUNGAN KECAMATAN</a>
+    <br>
+    <br>
+    <a href="" class="btn btn-sm btn-info"> PENYESUAIAN KECAMATAN</a>
+    <p>a. Perubahan batas wilayah kecamatan</p>
+    <p>b. Perubahan nama kecamatan</p>
+    <p>c. Pemindahan ibu kota kecamatan</p>
+    <p>d. Perubahan nama ibu kota kecamatan</p>
+    <p>e. Perbaikan redaksional nama kecamatan</p>

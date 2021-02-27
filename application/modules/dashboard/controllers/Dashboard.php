@@ -4,19 +4,24 @@ class Dashboard extends MX_Controller
 {
   public function index()
   {
+    $this->load->view('header');
     $this->load->view('index');
+    $this->load->view('footer');
   }
 
-  public function view_options()
-  {
-    $this->load->view('options');
-    $this->load->view('formulir_js');
-  }
+  // public function view_options()
+  // {
+  //   $this->load->view('header');
+  //   $this->load->view('options');
+  //   $this->load->view('footer');
+  // }
 
   public function form_pembentukan()
   {
+    $this->load->view('header');
     $this->load->view('formulir');
     $this->load->view('formulir_js');
+    $this->load->view('footer');
   }
 
   function provinsi()
@@ -78,7 +83,7 @@ class Dashboard extends MX_Controller
     }
   }
 
-  function insert()
+  function insert_induk_kec()
   {
     
     $provinsi = $this->input->post('provinsi');
@@ -87,42 +92,40 @@ class Dashboard extends MX_Controller
     $year = $this->input->post('year');
     $luas = $this->input->post('luas');
     $calon = $this->input->post('calon');
-    $daerah = $this->input->post('daerah');
-    $freg = count(array($daerah));
-    echo $daerah;
-    for($i=0; $i<$freg; $i++)  {
-      if(trim($daerah[$i] != ''))  
-      {
-        $hsl = array( 'STATUS'=> array(
-          'NAMA_WILAYAH' => $daerah[$i]
-        ));
-        echo json_encode($hsl);
-      }
-      echo $daerah[$i];
-    }
-    // if(empty(($provinsi) && ($kota) && ($kecamatan) && ($year) && ($luas) && ($calon))){
-    //   $data = ['Data Null'];
-    //   echo json_encode($data);
-    // }else{
-      $data = [
-        "provinsi" => $provinsi,
-        "kota" => $kota,
-        "kecamatan" => $kecamatan,
-        "tahun_pembentukan" => $year,
-        "calon_kecmatan"=>$calon,
-        "luas_nya" => $luas,
-        "daerah" => $daerah
-      ];
-
-      echo json_encode($data);
-    // }
-
-
     
-    // echo json_encode($preg);
-           
+    if(empty(($provinsi) && ($kota) && ($kecamatan) && ($year) && ($luas) && ($calon))){
+      $msg['err'] = 'error';
+      echo json_encode($msg);
+    }else{
+      $data = [
+        "nama_provinsi" => $provinsi,
+        "nama_kota" => $kota,
+        "nama_kec_induk" => $kecamatan,
+        "nama_calon_kec"=>$calon,
+        "tahun_terbentuk" => $year,
+        "luas_wilayah" => $luas
+      ];
+      $this->db->insert('dim_calon_kecamatan', $data);
+      $msg['ins'] = $this->db->insert_id();
+      // $msg['ins'] = 1;
+    
+      $msg['oke'] = 'success';
+      echo json_encode($msg);
+    }
+  }
 
-
+  function insert_wilayah()
+  {
+    
+    $id_induk = $this->input->post('id_wil');
+    $daerah = $this->input->post('daerah');
+      $data_2 = [
+        "id_kec_baru" => $id_induk,
+        "nama_wilayah" => $daerah
+      ];
+      $this->db->insert('dim_cakupan_wilayah', $data_2);
+      // $msg = 'success';
+      // echo json_encode($data_2);
   }
 
 }

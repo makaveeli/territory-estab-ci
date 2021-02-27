@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/css/style.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/plugins/fontawesome-free/css/all.min.css">
-<body>
-<div class="container-fluid">
+
   <!-- <form action="" method="post" id="theform"> -->
     <div class="row">
       <div class="col-md-12">
@@ -148,8 +139,8 @@
             </div>
                     
           <div class="oke-jo">
-            <input type="" class="btn btn-sm btn-danger noob" value="Back">
-            <input type="reset" class="btn btn-sm btn-secondary noob" value="Reset">
+            <a href="<?php echo base_url('/dashboard'); ?>" class="btn btn-sm btn-danger noob">Back</a>
+            <input type="reset" class="btn btn-sm btn-secondary noob" value="Reset" onClick="kuvk()">
             <input type="submit" value="Save" class="btn btn-sm btn-success noob" id="simpan">
           </div>        
         </div>
@@ -158,10 +149,3 @@
     </div>
           <!-- /.row -->
   <!-- </form> -->
-</div><!-- /.container-fluid -->
-    
-  <script src="<?php echo base_url(); ?>asset/js/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
- 
-</body>
-</html>
